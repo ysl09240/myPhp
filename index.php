@@ -1,7 +1,12 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: Administrator
- * Date: 2016/5/24
- * Time: 16:02
- */
+
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="web/common/js/angular.min.js"></script>
+</head>
+<body>
+Your name: <input type="text" ng-model="yourname" placeholder="World">
+<hr>
+Hello {{yourname || 'World'}}!
+</body>
+</html>
