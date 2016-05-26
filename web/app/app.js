@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/5/25.
  */
 angular.module('myApp', [
-    'ngRoute',
+    'ui.router',
     'myApp.config',
     //'myApp.filters',
     //'myApp.services',

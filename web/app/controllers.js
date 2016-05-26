@@ -13,10 +13,10 @@ angular.module("myApp.controllers",[])
             console.log("route change start!");
         });
     })
-    .controller("aController",function($scope,$route){
-        $scope.hello = "hello,a!";
+    .controller("loginCtrl",function($scope){
+        $scope.yourname = "hello,a!";
     })
-    .controller("bController",function($scope){
+    .controller("mainCtrl",function($scope){
         $scope.hello = "hello,b!";
     })
 
