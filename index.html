@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <ul>
+        <li><a href="#/a">click a</a></li>
+        <li><a href="#/b">click b</a></li>
+    </ul>
+     <ng-view></ng-view>
+</div>
+<script src="web/app/app.js"></script>
+<script src="web/app/config.js"></script>
+<script src="web/app/controllers.js"></script>
+</body>
+</html>
