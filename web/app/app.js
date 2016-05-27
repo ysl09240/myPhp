@@ -3,9 +3,10 @@
  */
 angular.module('myApp', [
     'ui.router',
+    'myApp.services',
     'myApp.config',
+    'myApp.controllers'
     //'myApp.filters',
     //'myApp.services',
     //'myApp.directives',
-    'myApp.controllers'
 ]);

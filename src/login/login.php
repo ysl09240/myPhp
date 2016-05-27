@@ -7,7 +7,8 @@
  */
 session_start();
 require_once ('../utils/connect.php');
-$action = $_GET['action'];
+$action = $_POST['action'];
+echo $action;
 if($action == 'login'){
     $user = stripslashes($_POST['user']);
     $pass = stripslashes($_POST['pass']);
