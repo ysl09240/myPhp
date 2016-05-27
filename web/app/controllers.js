@@ -19,8 +19,9 @@ angular.module("myApp.controllers",[])
                 method: "POST",
                 url: "/src/login/login.php",
                 params: {
-                    "user": $scope.user,
-                    "pass": $scope.pass
+                    action:'login',
+                    user: $scope.user,
+                    pass: $scope.pass
                 }
             }).success(function(data){
                 console.log(data);
