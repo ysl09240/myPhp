@@ -7,7 +7,8 @@
  */
 session_start();
 require_once ('../utils/connect.php');
-$action = $_GET['action'];
+$action = $_POST['action'];
+echo $action;
 if($action == 'login'){
     $user = stripslashes($_POST['user']);
     $pass = stripslashes($_POST['pass']);
@@ -22,6 +23,14 @@ if($action == 'login'){
     $md5pass = md5($pass);//密码使用md5加密
     $sql = "select * from t_user where user_name='$user'";
     $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // 输出每行数据
+        while($row = $result->fetch_assoc()) {
+            echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"];
+        }
+    } else {
+        echo "0 results";
+    }
     $query = mysql_query("select * from user where username='$user'");
     $us = is_array($row = mysql_fetch_array($query));
 

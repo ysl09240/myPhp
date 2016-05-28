@@ -13,14 +13,21 @@ angular.module("myApp.controllers",[])
             console.log("route change start!");
         });
     })
-    .controller("loginCtrl",function($scope){
-        $scope.users = {
-            login:function(){
-                
-                console.log("11111");
-                console.log(this.user);
-            }
+    .controller("loginCtrl",function($scope,$http){
+        $scope.login = function(){
+            $http({
+                method: "POST",
+                url: "/src/login/login.php",
+                params: {
+                    action:'login',
+                    user: $scope.user,
+                    pass: $scope.pass
+                }
+            }).success(function(data){
+                console.log(data);
+            });
         }
+
     })
     .controller("mainCtrl",function($scope){
         $scope.hello = "hello,b!";
