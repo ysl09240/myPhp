@@ -14,7 +14,13 @@ angular.module("myApp.controllers",[])
         });
     })
     .controller("loginCtrl",function($scope){
-        $scope.yourname = "hello,a!";
+        $scope.users = {
+            login:function(){
+                
+                console.log("11111");
+                console.log(this.user);
+            }
+        }
     })
     .controller("mainCtrl",function($scope){
         $scope.hello = "hello,b!";
