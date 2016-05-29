@@ -8,7 +8,6 @@
 session_start();
 require_once ('../utils/connect.php');
 $action = $_POST['action'];
-echo $action;
 if($action == 'login'){
     $user = stripslashes($_POST['user']);
     $pass = stripslashes($_POST['pass']);
@@ -25,40 +24,40 @@ if($action == 'login'){
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         // 输出每行数据
-        while($row = $result->fetch_assoc()) {
-            echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"];
+//        while($row = $result->fetch_assoc()) {
+//            echo "<br> id: ". $row["id"]. " - Name: ". $row["user_name"]. " " . $row["age"];
+//        }
+        $us = is_array($row=$result->fetch_assoc());
+        $ps = $us ? $md5pass == md5($row['password']) : FALSE;
+        if ($ps) {
+            $counts = $row['login_counts'] + 1;
+            $_SESSION['user'] = $row['user_name'];
+            $_SESSION['login_time'] = $row['login_time'];
+            $_SESSION['login_counts'] = $counts;
+            $ip = $_SERVER["REMOTE_ADDR"]; //获取登录IP
+            $time = date('Y-m-d H:i:s', time());
+            $rs = $conn->query("update t_user set login_time='$time', login_ip='$ip',
+        login_counts='$counts',age=20 where user_name='$user'");
+            if ($rs) {
+                 //2010-08-29
+                $arr['success'] = 1;
+                $arr['msg'] = '登录成功!';
+                $arr['user'] = $_SESSION['user'];
+                $arr['login_time'] = $_SESSION['login_time'];
+                $arr['login_counts'] = $_SESSION['login_counts'];
+            } else {
+                $arr['success'] = 0;
+                $arr['msg'] = '登录失败';
+            }
+        } else {
+            $arr['success'] = 0;
+            $arr['msg'] = '用户名或密码错误！';
         }
+        echo json_encode($arr); //输出json数据
     } else {
         echo "0 results";
     }
-    $query = mysql_query("select * from user where username='$user'");
-    $us = is_array($row = mysql_fetch_array($query));
 
-    $ps = $us ? $md5pass == $row['password'] : FALSE;
-    if ($ps) {
-        $counts = $row['login_counts'] + 1;
-        $_SESSION['user'] = $row['username'];
-        $_SESSION['login_time'] = $row['login_time'];
-        $_SESSION['login_counts'] = $counts;
-        $ip = get_client_ip(); //获取登录IP
-        $logintime = mktime();
-        $rs = mysql_query("update user set login_time='$logintime',login_ip='$ip',
-        login_counts='$counts'");
-        if ($rs) {
-            $arr['success'] = 1;
-            $arr['msg'] = '登录成功！';
-            $arr['user'] = $_SESSION['user'];
-            $arr['login_time'] = date('Y-m-d H:i:s',$_SESSION['login_time']);
-            $arr['login_counts'] = $_SESSION['login_counts'];
-        } else {
-            $arr['success'] = 0;
-            $arr['msg'] = '登录失败';
-        }
-    } else {
-        $arr['success'] = 0;
-        $arr['msg'] = '用户名或密码错误！';
-    }
-    echo json_encode($arr); //输出json数据
 }
 elseif ($action == 'logout') {  //退出
     unset($_SESSION);

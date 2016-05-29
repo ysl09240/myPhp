@@ -8,21 +8,25 @@ angular.module('myApp', [
     //'myApp.filters',
     //'myApp.services',
     //'myApp.directives',
-],function($httpProvider) {
-    // Use x-www-form-urlencoded Content-Type
+],function ($httpProvider) {
+    // 头部配置
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+    $httpProvider.defaults.headers.post['Accept'] = 'application/json, text/javascript, */*; q=0.01';
+    $httpProvider.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest';
+
     /**
-     * The workhorse; converts an object to x-www-form-urlencoded serialization.
+     * 重写angular的param方法，使angular使用jquery一样的数据序列化方式  The workhorse; converts an object to x-www-form-urlencoded serialization.
      * @param {Object} obj
      * @return {String}
      */
-    var param = function(obj) {
+    var param = function (obj) {
         var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
-        for(name in obj) {
+
+        for (name in obj) {
             value = obj[name];
 
-            if(value instanceof Array) {
-                for(i=0; i<value.length; ++i) {
+            if (value instanceof Array) {
+                for (i = 0; i < value.length; ++i) {
                     subValue = value[i];
                     fullSubName = name + '[' + i + ']';
                     innerObj = {};
@@ -30,8 +34,8 @@ angular.module('myApp', [
                     query += param(innerObj) + '&';
                 }
             }
-            else if(value instanceof Object) {
-                for(subName in value) {
+            else if (value instanceof Object) {
+                for (subName in value) {
                     subValue = value[subName];
                     fullSubName = name + '[' + subName + ']';
                     innerObj = {};
@@ -39,13 +43,15 @@ angular.module('myApp', [
                     query += param(innerObj) + '&';
                 }
             }
-            else if(value !== undefined && value !== null)
+            else if (value !== undefined && value !== null)
                 query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
         }
+
         return query.length ? query.substr(0, query.length - 1) : query;
     };
+
     // Override $http service's default transformRequest
-    $httpProvider.defaults.transformRequest = [function(data) {
+    $httpProvider.defaults.transformRequest = [function (data) {
         return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
     }];
 });
