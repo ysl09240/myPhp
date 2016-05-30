@@ -20,6 +20,7 @@ angular.module("myApp.controllers",[])
                 user:"slin",
                 pass:"12345"
             }).success(function(data){
+                console.log(data);
                 if(data.success){
                     $state.go("main");
                 }

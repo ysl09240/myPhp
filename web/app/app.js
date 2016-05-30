@@ -13,7 +13,6 @@ angular.module('myApp', [
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
     $httpProvider.defaults.headers.post['Accept'] = 'application/json, text/javascript, */*; q=0.01';
     $httpProvider.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest';
-
     /**
      * 重写angular的param方法，使angular使用jquery一样的数据序列化方式  The workhorse; converts an object to x-www-form-urlencoded serialization.
      * @param {Object} obj
@@ -21,10 +20,8 @@ angular.module('myApp', [
      */
     var param = function (obj) {
         var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
-
         for (name in obj) {
             value = obj[name];
-
             if (value instanceof Array) {
                 for (i = 0; i < value.length; ++i) {
                     subValue = value[i];

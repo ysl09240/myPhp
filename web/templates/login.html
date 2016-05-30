@@ -1,4 +1,5 @@
 <style type="text/css">
+    .login_header{width:80%;height:40%;margin:10px auto;position:relative;border:1px solid #666;}
     .login_content{ !important; width:100% !important;background-size: cover !important;height: 820px; !important;}
     /*.login_center{margin-top:300px;}*/
     .login_form div{border-radius:30px;background-color: #FFFFFF;width:80%;height:55px;margin:20px auto;line-height:52px;border: solid 1px #B8CBD1}
@@ -7,8 +8,14 @@
     .login_role span{display: inline-block;width:120px;height:50px;border-radius: 25px;text-align: center;color:#FFFFFF;line-height: 50px;}
     .loginSys{width:80%;height:55px;letter-spacing:5px;font-size:24px;border-radius: 30px;background-color: #F7AB00;margin:50px auto;text-align: center;line-height: 55px;color:#FFFFFF;}
 </style>
-
 <div class="login_content" ng-controller="loginCtrl">
+    <div class="login_header">
+        <ul class="slides" style="padding: 0;margin-top: 0;">
+            <li>
+              <img  width="100%" height="328px" style="background-image: url(/web/images/welcome.png);background-repeat: no-repeat;background-position: center;"  />
+            </li>
+        </ul>
+    </div>
     <div class="login_center">
         <div class="login_form">
             <form>
