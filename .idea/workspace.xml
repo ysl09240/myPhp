@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e04cfc-908a-4e71-a775-49f3e2154f78" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myPhp.iml" afterPath="$PROJECT_DIR$/myPhp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/login/login.php" afterPath="$PROJECT_DIR$/src/login/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/connect.php" afterPath="$PROJECT_DIR$/src/utils/connect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/app.js" afterPath="$PROJECT_DIR$/web/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/controllers.js" afterPath="$PROJECT_DIR$/web/app/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/services.js" afterPath="$PROJECT_DIR$/web/app/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/login.html" afterPath="$PROJECT_DIR$/web/templates/login.html" />
     </list>
     <ignored path="myPhp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,12 +39,8 @@
         <entry file="file://$PROJECT_DIR$/src/login/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <marker date="1464339562302" expanded="true" signature="487:531" placeholder="select * fro..t_user..." />
-                <marker date="1464339562302" expanded="true" signature="845:886" placeholder="select * fro..user..." />
-                <marker date="1464339562302" expanded="true" signature="1301:1387" placeholder="update user ..." />
-              </folding>
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,8 +48,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.050847456">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.10169491">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/web/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -98,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/web/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
               </folding>
@@ -207,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,9 +265,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -799,11 +804,12 @@
       <workItem from="1464337553586" duration="3850000" />
       <workItem from="1464569794099" duration="28000" />
       <workItem from="1464572925461" duration="72000" />
+      <workItem from="1464573076811" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55014000" />
+    <option name="totallyTimeSpent" value="55018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="3" width="1832" height="1024" extended-state="0" />
@@ -891,11 +897,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <marker date="1464339562302" expanded="true" signature="487:531" placeholder="select * fro..t_user..." />
-            <marker date="1464339562302" expanded="true" signature="845:886" placeholder="select * fro..user..." />
-            <marker date="1464339562302" expanded="true" signature="1301:1387" placeholder="update user ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,11 +959,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1464339562302" expanded="true" signature="487:531" placeholder="select * fro..t_user..." />
-            <marker date="1464339562302" expanded="true" signature="845:886" placeholder="select * fro..user..." />
-            <marker date="1464339562302" expanded="true" signature="1301:1387" placeholder="update user ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1242,7 @@
     <entry file="file://$PROJECT_DIR$/web/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1270,7 +1268,7 @@
     <entry file="file://$PROJECT_DIR$/web/app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
           </folding>
@@ -1280,19 +1278,15 @@
     <entry file="file://$PROJECT_DIR$/src/login/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <marker date="1464339562302" expanded="true" signature="487:531" placeholder="select * fro..t_user..." />
-            <marker date="1464339562302" expanded="true" signature="845:886" placeholder="select * fro..user..." />
-            <marker date="1464339562302" expanded="true" signature="1301:1387" placeholder="update user ..." />
-          </folding>
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.050847456">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.10169491">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -13,18 +13,16 @@ angular.module("myApp.controllers",[])
             console.log("route change start!");
         });
     })
-    .controller("loginCtrl",function($scope,$http){
+    .controller("loginCtrl",function($scope,$http,$state){
         $scope.login = function(){
-            $http({
-                method: "POST",
-                url: "/src/login/login.php",
-                params: {
-                    action:'login',
-                    user: $scope.user,
-                    pass: $scope.pass
-                }
+            $http.post("/src/login/login.php",{
+                action:"login",
+                user:"slin",
+                pass:"12345"
             }).success(function(data){
-                console.log(data);
+                if(data.success){
+                    $state.go("main");
+                }
             });
         }
 
