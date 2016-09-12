@@ -15,13 +15,15 @@ angular.module("myApp.controllers",[])
     })
     .controller("loginCtrl",function($scope,$http,$state){
         $scope.login = function(){
+            $scope.user="slin";
+            $scope.pass="123456";
             $http.post("/src/login/login.php",{
                 action:"login",
-                user:"slin",
-                pass:"12345"
+                user:$scope.user,
+                pass:$scope.pass
             }).success(function(data){
-                console.log(data);
                 if(data.success){
+                    $scope.data = data;
                     $state.go("main");
                 }
             });
@@ -29,6 +31,7 @@ angular.module("myApp.controllers",[])
 
     })
     .controller("mainCtrl",function($scope){
-        $scope.hello = "hello,b!";
+        $scope.user = "slin";
+        $scope.age = 24;
     })
 

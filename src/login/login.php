@@ -22,6 +22,8 @@ if($action == 'login'){
     $md5pass = md5($pass);//密码使用md5加密
     $sql = "select * from t_user where user_name='$user'";
     $result = $conn->query($sql);
+    // $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    // printf ("%s : %s",$row["name"],$row["url"]);
     if ($result->num_rows > 0) {
         // 输出每行数据
 //        while($row = $result->fetch_assoc()) {
@@ -32,7 +34,7 @@ if($action == 'login'){
         if ($ps) {
             $counts = $row['login_counts'] + 1;
             $_SESSION['user'] = $row['user_name'];
-            $_SESSION['login_time'] = $row['login_time'];
+            $_SESSION['login_time'] = localtime();
             $_SESSION['login_counts'] = $counts;
             $ip = $_SERVER["REMOTE_ADDR"]; //获取登录IP
             $time = date('Y-m-d H:i:s', time());
