@@ -1,0 +1,26 @@
+
+<style type="text/css">
+    .publish_center {
+        margin-left: auto;
+        margin-right: auto;
+        width:380px;
+        height:200px;
+        border-style:solid;
+        border-width:1px;
+    }
+
+</style>
+<div ng-controller="publishCtrl">
+    <div class="publish_center" >
+        <div style="margin:10px;">
+            <input type="text" style="width:98%" ng-model="title" placeholder="请输入标题" />
+        </div>
+        <div style="margin:10px;">
+            <textarea placeholder="请输入你的心情" style="width:98%;height: 120px;" ng-model="content" ></textarea>
+        </div>
+        <div style="margin:10px;">
+            <button style="float:right;margin-right:5px" ng-click="toPublish()">发布</button>
+        </div>
+    </div>
+</div>
+

@@ -11,6 +11,7 @@ $db_database='slin';
 $db_username='slin';
 $db_password='36226870';
 $conn = new mysqli($db_host,$db_username,$db_password,$db_database,"3306");
+$conn -> set_charset('utf8');//连接上之后。设置字符集
 if ($conn->connect_error) {
     die('Connect Error (' . $conn->connect_errno . ') '
         . $conn->connect_error);

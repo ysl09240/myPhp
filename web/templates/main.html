@@ -1,14 +1,30 @@
 
+<style type="text/css">
+    .main_center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
 <div ng-controller="mainCtrl">
-    <ul>
-        <li>
-            <span>名字:</span>
-            <span>{{user}}</span>
-        </li>
-        <li>
-            <span>年龄:</span>
-            <span>{{age}}</span>
-        </li>
-    </ul>
+    <div class="main_center" >
+        <div>
+            <button style="float:right" ng-click="publish()">发布心情</button>
+        </div>
+       <div style="width:80%;">
+           <img ng-src="/web/images/user.png" style="width:20px;height:20px;"/>
+           <span>朱亮亮</span>
+           <div style="">
+               <span style="width:100%;">我今天心情很好。想吃好吃的。。你明白不？sfsdf枯村别田木大土我今天心情很好。想吃好吃的。。你明白不？sfsdf枯村别田木大土我今天心情很好。想吃好吃的。。你明白不？sfsdf枯村别田木大土我今天心情很好。想吃好吃的。。你明白不？sfsdf枯村别田木大土</span>
+               <div style="float:right">
+                   <button>评论</button>
+               </div>
+           </div>
+           <div style="margin-left:30px;" id="comment">
+               <p><img ng-src="/web/images/user.png" style="width:20px;height:20px;"/>小李子 &nbsp;回复说: 我是爱你的</p>
+               <p><img ng-src="/web/images/user.png" style="width:20px;height:20px;"/>老郑  &nbsp;评论说 :你是帅帅的你是帅帅的你是帅帅的你是帅帅的你是帅帅的你是帅帅的你是帅帅的 </p>
+           </div>
+       </div>
+    </div>
 </div>
 

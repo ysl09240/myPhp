@@ -33,6 +33,7 @@ if($action == 'login'){
         $ps = $us ? $md5pass == md5($row['password']) : FALSE;
         if ($ps) {
             $counts = $row['login_counts'] + 1;
+            $_SESSION['userId'] = $row['id'];
             $_SESSION['user'] = $row['user_name'];
             $_SESSION['login_time'] = localtime();
             $_SESSION['login_counts'] = $counts;

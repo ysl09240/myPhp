@@ -37,4 +37,9 @@ angular.module('myApp.config',[])
                 templateUrl: "web/templates/main.html",
                 controller: 'mainCtrl'
             })
+             .state("publish", {
+                url:"/publish",
+                templateUrl: "web/templates/publish.html",
+                controller: 'publishCtrl'
+            })
     });

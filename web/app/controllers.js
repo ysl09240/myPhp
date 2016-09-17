@@ -30,8 +30,26 @@ angular.module("myApp.controllers",[])
         }
 
     })
-    .controller("mainCtrl",function($scope){
-        $scope.user = "slin";
-        $scope.age = 24;
+    .controller("mainCtrl",function($scope,$state){
+
+
+
+        $scope.publish = function(){
+            $state.go("publish");
+        }
+    })
+    .controller("publishCtrl",function($scope,$http,$state){
+        $scope.toPublish = function(){
+            $http.post("/src/article/article.php",{
+                action:"article",
+                title:$scope.title,
+                content:$scope.content
+            }).success(function(data){
+                if(data.success){
+                    $scope.data = data;
+                    $state.go("main");
+                }
+            });
+        }
     })
 
